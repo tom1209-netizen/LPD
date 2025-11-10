@@ -1,0 +1,24 @@
+# Ignore system files
+.DS_Store
+__pycache__/
+*.pyc
+
+# Log files
+logs/
+checkpoints/
+predictions/
+
+# SLURM files
+LPD.sbatch
+run_LPD.sh
+
+# Model weights
+model_weights/
+pretrained/
+
+# Visualization output
+prototype_comparisons/
+prototype_visualizations/
+
+# Dataset
+data/
