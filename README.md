@@ -8,8 +8,6 @@ Hopefully
 [📄 Paper]([Link to Paper PDF/arXiv])
 [🌐 Project Page]([Link to Project Page/Website])
 
----
-
 ## Highlights
 
 - **State-of-the-Art (SOTA)** performance on the BCSS-WSSS benchmark.
@@ -21,14 +19,18 @@ Hopefully
 
 ## Model Architecture (LPD Model Overview)
 
-\<div align="center"\>
-  \<img src="figures/overview.png" alt="LPD Model Architecture" width="800"\>
-  \<p\>\<em\>Overview of the LPD architecture. The Prototype Constructor uses **learnable prototypes** and is optimized end-to-end with the **Diversity Regularizer (blue, bottom)**, replacing PBIP's static clustering bank.\</em\>\</p\>
-\</div\>
+<div style="text-align: center;">
+  <img src="./figures/model.png" alt="LPD Model Architecture" width="800">
+  <p>
+    <em>
+      Overview of the LPD architecture. The Prototype Constructor uses 
+      <strong>learnable prototypes</strong> and is optimized end-to-end with the 
+      <strong>Diversity Regularizer (blue, bottom)</strong>, replacing PBIP's static clustering bank.
+    </em>
+  </p>
+</div>
 
 The architecture maintains the spirit of feature alignment (as in PBIP's Mask Refiner) but achieves prototype discovery and mask generation in a single, efficient, unified stage.
-
----
 
 ## Installation
 
@@ -55,8 +57,6 @@ cd LPD
 # Install dependencies
 pip install -r requirements.txt
 ```
-
----
 
 ## Dataset: BCSS-WSSS
 
@@ -87,8 +87,6 @@ data/
 │       └── mask/  # Ground truth masks (for evaluation only)
 ```
 
----
-
 ## Quick Start (One-Stage Training)
 
 LDP is trained end-to-end using a single command.
@@ -116,8 +114,6 @@ To evaluate a trained model checkpoint on the test set:
 # Evaluate the best checkpoint
 python visualization_utils/test_and_visualize.py --checkpoint ./work_dirs/bcss/lpd/latest.pth --config ./work_dirs/bcss/lpd/config.yaml
 ```
-
----
 
 ## License and Citation
 
