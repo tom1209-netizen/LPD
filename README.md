@@ -1,12 +1,14 @@
+![](./figures/paper_accepted.jpg)
+
 # LPD: Learnable Prototypes with Diversity Regularization for Weakly Supervised Histopathology Segmentation
 
 **Official PyTorch implementation of paper LPD**
 
 > **Cluster-Free Learnable Prototypes with Diversity Regularization for One-Stage Weakly Supervised Semantic Segmentation in Histopathology**
 
-Hopefully
-[📄 Paper]([Link to Paper PDF/arXiv])
-[🌐 Project Page]([Link to Project Page/Website])
+**✅ Accepted at ISBI 2025**
+
+[📄 Paper](https://arxiv.org/abs/2512.05922)
 
 ## Highlights
 
@@ -17,14 +19,16 @@ Hopefully
 
 ## Abstract
 
+Weakly supervised semantic segmentation (WSSS) in histopathology reduces pixel-level labeling by learning from image-level labels, but it is hindered by inter-class homogeneity, intra-class heterogeneity, and CAM-induced region shrinkage (global pooling-based class activation maps whose activations highlight only the most distinctive areas and miss nearby class regions). Recent works address these challenges by constructing a clustering prototype bank and then refining masks in a separate stage; however, such two-stage pipelines are costly, sensitive to hyperparameters, and decouple prototype discovery from segmentation learning, limiting their effectiveness and efficiency. We propose a cluster-free, one-stage learnable-prototype framework with diversity regularization to enhance morphological intra-class heterogeneity coverage. Our approach achieves state-of-the-art (SOTA) performance on BCSS-WSSS, outperforming prior methods in mIoU and mDice. Qualitative segmentation maps show sharper boundaries and fewer mislabels, and activation heatmaps further reveal that, compared with clustering-based prototypes, our learnable prototypes cover more diverse and complementary regions within each class, providing consistent qualitative evidence for their effectiveness.
+
 ## Model Architecture (LPD Model Overview)
 
 <div style="text-align: center;">
   <img src="./figures/model.png" alt="LPD Model Architecture" width="800">
   <p>
     <em>
-      Overview of the LPD architecture. The Prototype Constructor uses 
-      <strong>learnable prototypes</strong> and is optimized end-to-end with the 
+      Overview of the LPD architecture. The Prototype Constructor uses
+      <strong>learnable prototypes</strong> and is optimized end-to-end with the
       <strong>Diversity Regularizer (blue, bottom)</strong>, replacing PBIP's static clustering bank.
     </em>
   </p>
@@ -117,16 +121,15 @@ python visualization_utils/test_and_visualize.py --checkpoint ./work_dirs/bcss/l
 
 ## License and Citation
 
-This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 If you find this work useful, please consider citing:
-Hopefully
 
 ```bibtex
-@inproceedings{[Your Paper ID],
-  title={Cluster-Free Learnable Prototypes with Diversity Regularization for One-Stage Weakly Supervised Semantic Segmentation in Histopathology},
-  author={[Your Authors]},
-  booktitle={[Your Conference] (ISBI/CVPR)},
-  year={[Your Year]}
+@inproceedings{le2025lpd,
+  title={LPD: Learnable Prototypes with Diversity Regularization for Weakly Supervised Histopathology Segmentation},
+  author={Le, Khang and Vu, Anh Mai and Vo, Thi Kim Trang and Thach, Ha and Quang, Ngoc Bui Lam and Nguyen, Thanh-Huy and Le, Minh H. N. and Han, Zhu and Mohan, Chandra and Van Nguyen, Hien},
+  booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
+  year={2025}
 }
 ```
